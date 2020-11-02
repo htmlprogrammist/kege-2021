@@ -8,14 +8,13 @@
 Например, в диапазоне [5; 9] ровно два различных натуральных делителя имеют числа 6 и 8,
 поэтому для этого диапазона вывод на экране должна содержать следующие значения:
 """
-j = 2
 a = [1, 2]
-for i in range(174457, 174505+1):
+max_divider = 1
+for i in range(174457, 174505 + 1):
     divider = 0
-    for j in range(2, i):
+    for j in range(2, i // 2):
         if i % j == 0:
-            if divider < 2:
-                divider += 1
-                a[divider-1] = j
-    if divider == 2 and a[1] > 100:
-        print(a[0], a[1])
+            divider += 1
+            max_divider = j
+    if divider == 2:
+        print(i // max_divider, max_divider)

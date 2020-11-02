@@ -12,15 +12,14 @@
 2 4 52567 105134
 2 4 52571 105142
 """
-# Просто первые 4 делителя ищет у КАЖДОГО числа
-
-a = [0, 1, 2, 3, 4]
+max_divider = 1
+a = []
 for i in range(210235, 210300):
     divider = 0
-    for j in range(2, i // 2):
+    a = []
+    for j in range(2, i // 2 + 1):
         if i % j == 0:
-            if divider < 4:
-                divider += 1
-                a[divider - 1] = j
-                a[4] = i
-    print(a[0], a[1], a[2], a[3], 'Число:', a[4])
+            divider += 1
+            a.append(j)
+    if divider == 4:
+        print(a)
