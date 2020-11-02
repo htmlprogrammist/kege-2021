@@ -9,13 +9,13 @@
 поэтому для этого диапазона вывод на экране должна содержать следующие значения:
 """
 j = 2
-a = [1, 2, 3]
+a = [1, 2]
 for i in range(174457, 174505+1):
     divider = 0
     for j in range(2, i):
         if i % j == 0:
             if divider < 2:
                 divider += 1
-                a[divider] = j
-    if divider == 2 and a[2] > 100:
-        print(a[1], a[2])
+                a[divider-1] = j
+    if divider == 2 and a[1] > 100:
+        print(a[0], a[1])

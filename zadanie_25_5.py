@@ -12,8 +12,8 @@
 630630 1001
 """
 
-counter1 = 0
-counter2 = 0
+counter1 = 1
+counter2 = 1
 a = []
 for i in range(326496, 649632 + 1):
     for j in range(2, i // 2):
@@ -23,7 +23,11 @@ for i in range(326496, 649632 + 1):
             else:
                 counter2 += 1
     if counter1 == counter2 and counter1 >= 70:
-        # for k in range()
         k = 1001
-        a.append(i)
+        while i % k != 0:
+            k += 1
+        print(i, k)
+        # print('Есть 70 делитетей')
+        # if i == 450450 or i == 589050 or i == 630630:
+        #     print('Ура, есть одно из трёх чисел.')
 print(a)
