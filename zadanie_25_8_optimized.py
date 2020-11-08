@@ -13,21 +13,16 @@
 118 461969
 118 477071
 """
+from math import sqrt
+
 total = 0
 counter = 0
-# a = []
 for i in range(135790, 163228 + 1):
-    # a = []
     counter = 0
     total = 0
-    for j in range(2, i // 2 + 1):
-        # total = 0
-        # counter = 0
+    for j in range(2, int(sqrt(i)) + 1):
         if i % j == 0:
-            total += j
-            counter += 1
-    # print('total', total)
-    # print(counter, total)
+            total += j + i // j
+            counter += 2
     if total > 460000:
         print(counter, total)
-        # print(a)
