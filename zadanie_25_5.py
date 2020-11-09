@@ -12,11 +12,11 @@
 630630 1001
 """
 
-counter1 = 1
-counter2 = 1
+counter1 = 0
+counter2 = 0
 a = []
 for i in range(326496, 649632 + 1):
-    for j in range(2, i // 2):
+    for j in range(2, i // 2 + 1):
         if i % j == 0:
             if j % 2 == 0:
                 counter1 += 1
