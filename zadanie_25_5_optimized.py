@@ -23,7 +23,6 @@ for i in range(326496, 649632 + 1):
         k += 1
     for j in range(2, int(math.sqrt(i)) + 1 - k):
         if counter1 >= 70:
-            # print('Наше число', i)  # ! Выводит каждое число
             break
         # for j in range(2, int(i // 2) + 1):
         if i % j == 0:
@@ -36,4 +35,7 @@ for i in range(326496, 649632 + 1):
             if i // j % 2 != 0:
                 counter2 += 1
     if counter1 == counter2 and counter1 >= 70:
-        print(i)
+        k = 1001
+        while i % k != 0:
+            k += 1
+        print(i, k)
