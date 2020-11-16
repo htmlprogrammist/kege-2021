@@ -15,7 +15,6 @@ max_d = 1
 
 for i in range(25317, 51237 + 1):
     simple_counter = 0
-    dividers = []
     for d in range(2, int(math.sqrt(i)) + 1):
         if i % d == 0:
             k = 0
