@@ -11,40 +11,45 @@
 46410 17
 """
 import math
+max_d = 1
 
-dividers = []  # Простые делители
-dividers_all = []  # Все делители числа, из них потом циклом с j достанем простые делители и отправим в dividers
-counter_all = 0  # Счётчик всех делителей
-counter_simple = 0  # Счётчик простых делителей
-counter_wrong = 0  # Этот счётчик должен быть равен 0, если нет, то у нас не простой делитель
 for i in range(25317, 51237 + 1):
+    simple_counter = 0
     dividers = []
-    dividers_all = []
-    counter_all = 0
-    # Получение всех делителей
-    for k in range(2, int(math.sqrt(i)) + 1):
-        if i % k == 0:
-            dividers_all.append(k)
-            dividers_all.append(i // k)
-    # Изначально была какая-то тактика/идея.
-    # Сейчас тут просто счётчик делителей // len(dividers_all)
-    # for j in range(1, len(dividers_all) // 2 + 1):
-    #     # if counter_all > 0:  # Этот блок игнорируется
-    #     #     break
-    #     for r in range(len(dividers_all)):
-    #         if dividers_all[r] % j == 0:
-    #             counter_all += 1
-        # if dividers_all[j] % j == 0:
-        #     counter_all += 1
-    # Прохожусь по ВСЕМ делителям, пытаюсь найти 6 простых делителей
-    # СПОЙЛЕР: делает копию списка со ВСЕМИ делителями, там даже Тру есть
-    for m in range(len(dividers_all)):
-        counter_wrong = 0
-        for n in range(1, len(dividers_all)):
-            if dividers_all[m] % n == 0:
-                counter_wrong += 1
-        if counter_wrong == 0:
-            dividers.append(dividers_all[m])
+    for d in range(2, int(math.sqrt(i)) + 1):
+        if i % d == 0:
+            k = 0
+            for j in range(2, int(math.sqrt(d)) + 1):
+                if d % j == 0:
+                    k += 1
+            if k == 0:
+                simple_counter += 1
+                max_d = d
+    if simple_counter >= 6:
+        print(i, max_d)
+
+# dividers = []  # Простые делители
+# dividers_all = []  # Все делители числа, из них потом циклом с j достанем простые делители и отправим в dividers
+# counter_all = 0  # Счётчик всех делителей
+# counter_simple = 0  # Счётчик простых делителей
+# counter_wrong = 0  # Этот счётчик должен быть равен 0, если нет, то у нас не простой делитель
+# for i in range(25317, 51237 + 1):
+#     dividers = []
+#     dividers_all = []
+#     counter_all = 0
+#     # Получение всех делителей
+#     for k in range(2, int(math.sqrt(i)) + 1):
+#         if i % k == 0:
+#             dividers_all.append(k)
+#             dividers_all.append(i // k)
+#     # Находим из всех делителей простые
+#     for m in range(len(dividers_all)):
+#         counter_wrong = 0
+#         for n in range(1, len(dividers_all)):
+#             if dividers_all[m] % n == 0:
+#                 counter_wrong += 1
+#         if counter_wrong == 0:
+#             dividers.append(dividers_all[m])
     # if dividers == dividers_all:
     #     print(True)  # Всё True))))))))))))
     # print(dividers_all, 'Счётчик делителей =', counter_all)
@@ -93,3 +98,17 @@ for i in range(25317, 51237 + 1):
 #     #     dividers.append(j)
 #     # if dividers != [] and len(dividers) >= 6:
 #     #     print(i, max(dividers))
+
+
+    # Изначально была какая-то тактика/идея.
+    # Сейчас тут просто счётчик делителей // len(dividers_all)
+    # for j in range(1, len(dividers_all) // 2 + 1):
+    #     # if counter_all > 0:  # Этот блок игнорируется
+    #     #     break
+    #     for r in range(len(dividers_all)):
+    #         if dividers_all[r] % j == 0:
+    #             counter_all += 1
+        # if dividers_all[j] % j == 0:
+        #     counter_all += 1
+    # Прохожусь по ВСЕМ делителям, пытаюсь найти 6 простых делителей
+    # СПОЙЛЕР: делает копию списка со ВСЕМИ делителями, там даже Тру есть
