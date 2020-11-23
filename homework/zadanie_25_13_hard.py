@@ -19,10 +19,14 @@ import math
 for i in range(228224, 531135 + 1):
     dividers = []
     for j in range(2, int(math.sqrt(i)) + 1):
-        cube_t = int(j ** (1/3))
+        cube_t1 = int(j ** (1/3))
+        cube_t2 = int(i // j ** (1/3))
         if j % 2 != 0:
-            if j == cube_t ** 3:
+            if j == cube_t1 ** 3:
                 # print(True, j, cube_t)
                 dividers.append(j)
-    if len(dividers) > 4:
+        if i // j % 2 != 0:
+            if i // j == cube_t2 ** 3:
+                dividers.append(i // j)
+    if len(dividers) >= 4:
         print(len(dividers), max(dividers))
