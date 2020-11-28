@@ -8,32 +8,27 @@
 
 Например, для числа 2018 имеем следующие делители 2 и 1009.
 Поэтому результатом (не принимая во внимание количества делителей) будет пара чисел 2018 1009
+
+450450 1001
+589050 1050
+630630 1001
 """
 import math
 
-a = []
 counter1 = 0
 counter2 = 0
 for i in range(326496, 649632 + 1):
-    sqrt_i = int(math.sqrt(i))
     k = 0
     counter1 = 0
     counter2 = 0
-    if sqrt_i ** 2 == i:
-        k += 1
-    for j in range(2, int(math.sqrt(i)) + 1 - k):
-        if counter1 >= 70:
-            # print('Наше число', i)  # ! Выводит каждое число
-            break
-        # for j in range(2, int(i // 2) + 1):
+    for j in range(2, int(i // 2) + 1):
         if i % j == 0:
             if j % 2 == 0:
                 counter1 += 1
             else:
                 counter2 += 1
-            if i // j % 2 == 0:
-                counter1 += 1
-            if i // j % 2 != 0:
-                counter2 += 1
     if counter1 == counter2 and counter1 >= 70:
-        print(i)
+        k = 1001
+        while i % k != 0:
+            k += 1
+        print(i, k)
