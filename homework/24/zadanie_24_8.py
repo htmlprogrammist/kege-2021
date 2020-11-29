@@ -1,4 +1,4 @@
-document = open('24/24_414.txt')
+document = open('24_414.txt')
 a = document.read()
 k1 = 0
 k2 = 0

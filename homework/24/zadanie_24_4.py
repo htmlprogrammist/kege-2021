@@ -1,4 +1,4 @@
-document = open('24/24_321.txt')
+document = open('24_321.txt')
 a = document.read()
 current_number = ''
 b = []

@@ -1,4 +1,4 @@
-document = open('24/24_324.txt')
+document = open('24_324.txt')
 a = document.read()
 k = 0
 max_k = 0

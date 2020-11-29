@@ -1,4 +1,4 @@
-document = open('24/24_66.txt')
+document = open('24_66.txt')
 a = document.read()
 k = 1
 

@@ -1,4 +1,4 @@
-document = open('24/24_474.txt')
+document = open('24_474.txt')
 a = document.read()
 current_even_number = ''
 k = 0
