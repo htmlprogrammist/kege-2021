@@ -5,8 +5,8 @@ https://colab.research.google.com/github/htmlprogrammist/unified-state-exam/blob
 
 ## Miro
 Информатика1: https://miro.com/app/board/o9J_kuzYjEs=/  
-Информатика2: https://miro.com/app/board/o9J_kuzZ-dA=/
-Информатика3: https://miro.com/app/board/o9J_kuzZ_gc=/
+Информатика2: https://miro.com/app/board/o9J_kuzZ-dA=/  
+Информатика3: https://miro.com/app/board/o9J_kuzZ_gc=/  
 
 ---
 ## Useful links  
