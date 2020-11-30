@@ -1,4 +1,4 @@
-document = open('homework/24/24_21.txt')
+document = open('24/24_21.txt')
 a = document.read()
 k = 1
 max_k = 1

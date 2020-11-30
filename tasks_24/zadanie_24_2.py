@@ -1,4 +1,4 @@
-document = open("24_2.txt")
+document = open("24/24_2.txt")
 content = document.read()
 i = 0
 k = 0

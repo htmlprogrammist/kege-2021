@@ -1,4 +1,4 @@
-document = open('homework/24/24_324.txt')
+document = open('24/24_324.txt')
 a = document.read()
 max_k = 0
 current_word = ''

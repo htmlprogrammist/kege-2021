@@ -1,4 +1,4 @@
-document = open("24.txt")
+document = open("24/24.txt")
 # print(document.read())
 content = document.read()
 # print(content_splitted) => success

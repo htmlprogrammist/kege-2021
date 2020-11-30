@@ -1,4 +1,4 @@
-document = open('homework/24/24_279_1.txt')
+document = open('24/24_279_1.txt')
 a = document.read()
 k = 0
 
