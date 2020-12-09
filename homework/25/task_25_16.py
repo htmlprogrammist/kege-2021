@@ -9,6 +9,13 @@
 3 7
 Примечание. Простое число - натуральное число, имеющее ровно два различных
 натуральных делителя - единицу и самого себя.
+
+22 245711
+30 245719
+34 245723
+52 245741
+58 245747
+64 245753
 """
 import math
 
@@ -27,13 +34,22 @@ dividers = []
 #             if k == 0:
 #                 print(order_number, i)
 
+# for i in range(245690, 245756 + 1):
+#     order_number += 1
+#     for j in range(2, int(math.sqrt(i)) + 1):
+#         if i % j == 0:
+#             k = 0
+#             for d in range(2, int(math.sqrt(j)) + 1):
+#                 if j % d == 0:
+#                     k += 1
+#             if k == 0:
+#                 print(order_number, i)
+
 for i in range(245690, 245756 + 1):
     order_number += 1
+    counter = 0
     for j in range(2, int(math.sqrt(i)) + 1):
         if i % j == 0:
-            k = 0
-            for d in range(2, int(math.sqrt(j)) + 1):
-                if j % d == 0:
-                    k += 1
-            if k == 0:
-                print(order_number, i)
+            counter += 1
+    if counter == 0:
+        print(order_number, i)
