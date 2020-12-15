@@ -4,13 +4,13 @@
 при вводе которого программа выведет число 140.
 """
 
-x = int(input())
-a = 1
-
-while x > 0:
-    a *= x % 11
-    x = x // 11
-print(a)
+# x = int(input())
+# a = 1
+#
+# while x > 0:
+#     a *= x % 11
+#     x = x // 11
+# print(a)
 
 
 # n = 1
@@ -36,3 +36,13 @@ print(a)
 #         x = x // 11
 #     x += 1
 # print(x)
+
+# x = 1
+# while x != 0:
+#     a = 1
+#     while x > 0:
+#         a *= x % 11
+#         x = x // 11
+#     if a == 140:
+#         print('Ответ:', x)
+#     x += 1
