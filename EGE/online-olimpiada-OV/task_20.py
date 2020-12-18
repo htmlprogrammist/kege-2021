@@ -4,15 +4,23 @@
 при вводе которого программа выведет число 140.
 """
 
-# x = int(input())
-# a = 1
-#
-# while x > 0:
-#     a *= x % 11
-#     x = x // 11
-# print(a)
+x = int(input())
+a = 1
 
+while x > 0:
+    a *= x % 11
+    x = x // 11
+print(a)
 
+# for x in range(0, 200):
+#     a = 1
+#     print(1)
+#     while x < 201:
+#         print(2)
+#         a *= x % 11
+#         x = x // 11
+#     if a == 140:
+#         print(x)
 # n = 1
 # x = 1
 # a = 1
@@ -40,8 +48,10 @@
 # x = 1
 # while x != 0:
 #     a = 1
-#     while x > 0:
+#     while x < 50:
 #         a *= x % 11
+#         if a == 140:
+#             print(x)
 #         x = x // 11
 #     if a == 140:
 #         print('Ответ:', x)
