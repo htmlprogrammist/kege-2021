@@ -15,6 +15,9 @@ https://colab.research.google.com/drive/1ZuBfkGIYGs6CzR7LG9gnwy8eBR3gL4XR?usp=sh
 https://kompege.ru/  
 https://kpolyakov.spb.ru/school/ege/kege/start.htm?varId=1
 
+### Решу ЕГЭ
+https://inf-ege.sdamgia.ru/?redir=1
+
 ### Сайт Полякова  
 https://kpolyakov.spb.ru/school/ege.htm  
 https://kpolyakov.spb.ru/school/ege/online.htm
