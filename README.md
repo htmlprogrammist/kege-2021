@@ -4,7 +4,7 @@
 https://colab.research.google.com/github/htmlprogrammist/unified-state-exam/blob/master/google.colab.ipynb  
 ### Черновик  
 https://colab.research.google.com/drive/1ZuBfkGIYGs6CzR7LG9gnwy8eBR3gL4XR?usp=sharing  
-### Конспекты
+### Тетрадка
 https://colab.research.google.com/drive/12F04pcV41RMcDRBB-2PMXuW4zRK2nQ33?usp=sharing  
 [Конспекты.doc](conspects/polyakov/) | [Google Docs](https://drive.google.com/drive/folders/1HlPIlsAsfpgaz24wh_NAiGSKb80-76_-?usp=sharing)  
 
