@@ -17,7 +17,7 @@ for i in range(1000, 70000 + 1):
         fivefold = str(fivefold_i % 5) + fivefold
         fivefold_i //= 5
     if len(oct(i)) == 7 and len(fivefold) == 6:
-        if hex(i)[-2] == 'F' and hex(i)[-1] == 'A':
+        if hex(i)[-2] == 'f' and hex(i)[-1] == 'a':
             counter += 1
             mx = i
 print(counter, mx)
