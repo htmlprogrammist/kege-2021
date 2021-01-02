@@ -6,8 +6,8 @@ c = int(input('{0}x^2 + {1}x + N: '.format(a, b)))
 
 d = b**2 - 4*a*c
 if d > 0:
-    x1=(-b + math.sqrt(d))/(2*a)
-    x2=(-b - math.sqrt(d))/(2*a)
+    x1 = (-b + math.sqrt(d))/(2*a)
+    x2 = (-b - math.sqrt(d))/(2*a)
     print('x1: {0}, x2: {1}'.format(x1, x2))
 elif d == 0:
     x = -b/(2*a)
