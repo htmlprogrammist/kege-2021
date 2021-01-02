@@ -22,6 +22,5 @@ for i in range(1476, 7039 + 1):
     if i % 2 == 0 and i % 16 != 0 and digits[1] >= 4:
         counter += 1
         numbers.append(i)
-print(numbers)
-# print(max(numbers), min(numbers))  # 6998 1476. Разница между ними = 5522
-print(counter, (max(numbers) - min(numbers)) // 2)
+
+print(counter, (max(numbers) + min(numbers)) // 2)
