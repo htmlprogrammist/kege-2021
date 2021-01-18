@@ -17,12 +17,13 @@ while x // 7 > 0:
         S += x % 7
     x //= 7
 print(S)
+
 print('---')
 
 x = 0
 answers = []
 answer_S = 26
-# minimal_S = 25
+# minimal_S = 25  --> пояснение внизу
 while x < 3000:
     number = x
     S = 1
@@ -33,7 +34,9 @@ while x < 3000:
         else:
             S += number % 7
         number //= 7
-    if S == answer_S:
+    if S == answer_S:  # if S > minimal_S:
+        # неправильно, т.к. минимальное целое число, большее 25
+        # будет 26, поэтому там надо тупо строго делать '=='
         answers.append(x)
     x += 1
 print(answers)
