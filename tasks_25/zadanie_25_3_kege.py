@@ -7,3 +7,4 @@ print(array)
 
 for j in range(len(array)):
     if array[j] % j == 0:
+        pass
