@@ -1,7 +1,7 @@
 answers = []
 condition = 115
 
-for N in range(32):
+for N in range(10000000):
     binary = bin(N)[2:]
     if N % 2 == 0:
         binary += '00'
@@ -11,4 +11,4 @@ for N in range(32):
     if int(binary, 2) > condition:
         answers.append(N)
 
-print(min(answers))
+print(max(answers))
