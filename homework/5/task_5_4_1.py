@@ -41,3 +41,5 @@ for i in range(256):
         answers.append(int(binary, 2))
 
 print(answers)
+
+# 11011

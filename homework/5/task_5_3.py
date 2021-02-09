@@ -10,8 +10,6 @@
 35
 """
 
-answers = []
-
 for i in range(128):
     binary = bin(i)[2:]
     binary_inverted = ''
@@ -25,13 +23,13 @@ for i in range(128):
             binary_inverted += '1'
         else:
             binary_inverted += '0'
-    result = binary_inverted + '1'
+    result = int(binary_inverted, 2) + 1
     # print(binary_inverted)
     # print(result)
     # print(int(result, 2))
-    if int(result, 2) == 221:
-        answers.append(i)
+    if int(result) == 221:
+        print(i)
+        break
 
 # print(bin(221))  # 11011101
 # По сути, это binary_inverted => просто binary будет равна 00100010 = 34 в десятичной, но не 35...
-print(answers)

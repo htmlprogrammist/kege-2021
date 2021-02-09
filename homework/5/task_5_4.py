@@ -18,23 +18,14 @@ answers = []
 for i in range(256):
     binary = bin(i)[2:]
     binary += binary[-1]
-    counter_units = 0
-
-    for j in range(len(binary)):
-        if binary[j] == '1':
-            counter_units += 1
-    if counter_units % 2 == 0:
+    # for j in range(len(binary)):
+    #     if binary[j] == '1':
+    #         counter_units += 1
+    if binary.count('1') % 2 == 0:
         binary += '0'
     else:
         binary += '1'
-
-    for k in range(len(binary)):
-        if binary[k] == '1':
-            counter_units += 1
-    if counter_units % 2 == 0:
-        binary += '0'
-    else:
-        binary += '1'
+    binary += '0'
 
     if int(binary, 2) > 105:
         answers.append(int(binary, 2))
