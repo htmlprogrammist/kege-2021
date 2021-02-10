@@ -13,6 +13,5 @@ for x in 0, 1:
         for z in 0, 1:
             for w in 0, 1:
                 F = (not(x) and y and not(z) or x and not(y)) and not(w)
-                # print(type(F))
                 if F:
                     print(x, y, z, w, F)
