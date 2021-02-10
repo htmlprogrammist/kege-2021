@@ -28,6 +28,5 @@ for N in range(32):
         binary += '11'
     # print(binary, answer)
     if int(binary, 2) > condition:
-        mx = N
-
-print(mx)
+        print(N)
+        break
