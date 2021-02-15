@@ -1,7 +1,7 @@
 document = open('24/24_6.txt', 'r')
-print(document)
+# print(document)
 content_in_lines = document.readlines()
-print(content_in_lines)
+# print(content_in_lines)
 counter = 0
 # a = document.read()
 # arr = []
@@ -10,6 +10,8 @@ counter = 0
 # for i in range(1000):
 #     string = document.readline(i)
 #     arr.append(string)
+
+
 for line in content_in_lines:
     counter_X = 0
     counter_S = 0
@@ -21,10 +23,12 @@ for line in content_in_lines:
             counter_X += 1
     if counter_S == counter_X:
         counter += 1
-# print('Counter =>', counter)  - тысяча строк - совпало.
-# print(b)
-# print(c)
-# print(arr)
+print(counter)
+
+counter = 0
+for line in content_in_lines:
+    if line.count('S') == line.count('X'):
+        counter += 1
 print(counter)
 
 # Тоже правильное решение, но with взят из интернета
