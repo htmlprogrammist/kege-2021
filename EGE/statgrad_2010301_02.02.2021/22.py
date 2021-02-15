@@ -12,7 +12,7 @@
 answer_m = 5
 answer_s = 12
 number = 0
-while number < 100:
+while number < 10000:
     x = number
     m = 0
     s = 0
@@ -25,3 +25,4 @@ while number < 100:
     if s == answer_s and m == answer_m:
         print(number)
         break
+    number += 1
