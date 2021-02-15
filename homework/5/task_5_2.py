@@ -17,9 +17,6 @@
 """
 # 115 в двоичном представлении будет равняться 1110011
 # Поскольку длина здесь равняется 7, а прибавляем мы два разряда => максимальное число 31
-condition = 115
-mx = 0
-
 for N in range(32):
     binary = bin(N)[2:]
     if N % 2 == 0:
@@ -27,6 +24,6 @@ for N in range(32):
     else:
         binary += '11'
     # print(binary, answer)
-    if int(binary, 2) > condition:
+    if int(binary, 2) > 115:
         print(N)
         break
