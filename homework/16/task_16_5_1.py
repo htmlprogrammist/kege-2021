@@ -15,8 +15,8 @@ F = [1] * k
 for i in range(k):
     if i <= 3:
         F[i] = i
-    if 3 < n <= 32:
+    if 3 < i <= 32:
         F[i] = i // 4 + F[i - 3]
-    if n > 32:
+    if i > 32:
         F[i] = 2 * F[i - 5]
-print(F[n])  # 2097152
+print(F[n])
