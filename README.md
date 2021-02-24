@@ -1,4 +1,4 @@
-# My Python ЕГЭ tasks
+# My Python ЕГЭ tasks 🤔
 
 ## Google Colaboratory  
 https://colab.research.google.com/github/htmlprogrammist/unified-state-exam/blob/master/google.colab.ipynb  
