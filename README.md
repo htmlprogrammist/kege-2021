@@ -1,4 +1,5 @@
-# My Python ЕГЭ tasks 🤔
+# My Python ЕГЭ tasks  
+Коммиты в этом репозитории - это своеобразные отчёты: что я сделал за этот день  
 
 ## Google Colaboratory  
 https://colab.research.google.com/github/htmlprogrammist/unified-state-exam/blob/master/google.colab.ipynb  
