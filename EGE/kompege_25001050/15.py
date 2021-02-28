@@ -12,11 +12,11 @@ def deletion(m, n):
     return m % n == 0
 
 
-# def f(A, x):
-#     return deletion(70, A) and (not deletion(x, A) <= (deletion(x, 18) <= not(deletion(x, 42))))
+def f(A, x):
+    return deletion(70, A) and (deletion(x, A) or not(deletion(x, 18) and deletion(x, 42)))
 
 
-for A in range(1, 100):
+for A in range(1, 70 + 1):
     OK = True
     for x in range(1, 1000):
         if not f(A, x):
