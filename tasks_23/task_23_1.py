@@ -17,7 +17,6 @@
 """
 K = [1] * 21
 for n in range(2, 11):
-    condition = False
     K[n] = K[n - 1]
     if n % 2 == 0:
         K[n] += K[n // 2]
