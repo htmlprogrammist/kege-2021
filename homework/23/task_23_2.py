@@ -6,13 +6,15 @@
 Например: при помощи команды 2 число 23 преобразуется в 33. 
 Если перед выполнением команды 2 вторая с конца цифра равна 9, она не изменяется.
 Сколько есть программ, которые число 10 преобразуют в число 33? 
+
+25
 """
 
 k = [0] * (33 + 1)
-k[3] = 1
+k[10] = 1
 
 
-def increase_the_number_of_dozens(number):
+def a_cannon_at_sparrows(number):
     if number // 10 == 9:  # по условию
         pass  # Но, учитывая диапозон с 10 по 33, это вообще не нужно
     else:
@@ -23,10 +25,12 @@ def increase_the_number_of_dozens(number):
 
 for n in range(10, 33 + 1):
     if n + 1 <= 33:
-        k[n + 1] = k[n]
-    intermediate_result = increase_the_number_of_dozens(n)
-    print(intermediate_result)
-    if intermediate_result <= 33:
-        k[intermediate_result] = k[n]
+        k[n + 1] += k[n]
+    # intermediate_result = a_cannon_at_sparrows(n)
+    # print(intermediate_result)
+    # f intermediate_result <= 33:
+    #     k[intermediate_result] = k[n]
+    if n + 10 <= 33:
+        k[n + 10] += k[n]
 
-print(k[33])  # 0 => надо пофиксить
+print(k[33])
