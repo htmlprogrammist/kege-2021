@@ -26,11 +26,10 @@ def a_cannon_at_sparrows(number):
 for n in range(10, 33 + 1):
     if n + 1 <= 33:
         k[n + 1] += k[n]
-    # intermediate_result = a_cannon_at_sparrows(n)
-    # print(intermediate_result)
-    # f intermediate_result <= 33:
-    #     k[intermediate_result] = k[n]
-    if n + 10 <= 33:
-        k[n + 10] += k[n]
+    intermediate_result = a_cannon_at_sparrows(n)
+    if intermediate_result <= 33:
+        k[intermediate_result] += k[n]
+    # if n + 10 <= 33:
+    #     k[n + 10] += k[n]
 
 print(k[33])
