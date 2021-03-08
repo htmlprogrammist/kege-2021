@@ -2,7 +2,7 @@
 Коммиты в этом репозитории - это своеобразные отчёты: что я сделал за этот день  
 
 ## Google Colaboratory  
-https://colab.research.google.com/github/htmlprogrammist/unified-state-exam/blob/master/google.colab.ipynb  
+https://colab.research.google.com/github/htmlprogrammist/unified-state-exam/blob/master/jupyter.ipynb  
 ### Чистовик  
 https://colab.research.google.com/drive/12F04pcV41RMcDRBB-2PMXuW4zRK2nQ33?usp=sharing  
 ### Черновик  
