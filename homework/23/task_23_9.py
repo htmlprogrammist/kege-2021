@@ -12,15 +12,31 @@
 
 83
 """
-counter = 0
-# 20 = 10 + 5 раз делаем 1-ую команду
-# 320 = 5 раз выполняем 3-ью команду
-for n in range(20, 320 + 1):
-    if n % 2 == 0:
-        counter += 1
-    if n % 3 == 0:
-        counter += 1
-    if n % 3 == 0 and n % 2 == 0:
-        counter -= 1
+list_of_all_numbers = []
+range_tuple = 1, 2, 3
+initial_number = 10
 
-print(counter)
+
+def command(number, cmd):
+    if cmd == 1:
+        return number + 2
+    if cmd == 2:
+        return number + 3
+    if cmd == 3:
+        return number * 2
+
+
+for n1 in range_tuple:
+    out1 = command(initial_number, n1)
+    for n2 in range_tuple:
+        out2 = command(out1, n2)
+        for n3 in range_tuple:
+            out3 = command(out2, n3)
+            for n4 in range_tuple:
+                out4 = command(out3, n4)
+                for n5 in range_tuple:
+                    out5 = command(out4, n5)
+                    list_of_all_numbers.append(out5)
+
+
+print(len(set(list_of_all_numbers)))
