@@ -18,25 +18,14 @@ initial_number = 10
 
 
 def command(number, cmd):
-    if cmd == 1:
-        return number + 2
-    if cmd == 2:
-        return number + 3
-    if cmd == 3:
-        return number * 2
+    print('Вызов функции')
 
 
-for n1 in range_tuple:  # индексы у n можно убрать, результат тот же. Почему?
-    out1 = command(initial_number, n1)  # Непонятно.
-    for n2 in range_tuple:
-        out2 = command(out1, n2)
-        for n3 in range_tuple:
-            out3 = command(out2, n3)
-            for n4 in range_tuple:
-                out4 = command(out3, n4)
-                for n5 in range_tuple:
-                    out5 = command(out4, n5)
-                    list_of_all_numbers.append(out5)
+for n in range_tuple:
+    print('Вызов функции:', command(initial_number, n))
+    print('Значение н1', n)
+    for n in range_tuple:
+        print('Значение н2', n)
 
 
-print(len(set(list_of_all_numbers)))
+# print(len(set(list_of_all_numbers)))
