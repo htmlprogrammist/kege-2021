@@ -10,8 +10,8 @@
 16
 """
 counter = 0
-for n in range(3, 100):
-    if n % 3 == 0 and n % 2 == 0:
+for n in range(3, 100, 3):
+    if n % 2 == 0:
         counter += 1
 
 print(counter)
