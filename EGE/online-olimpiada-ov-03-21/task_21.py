@@ -36,4 +36,4 @@ for n in range(12, 36 + 1):
             k[n * 2] += k[n]
         if n * 3 <= 36 and n != 30:
             k[n * 3] += k[n]
-print(k)
+print(k[36])
