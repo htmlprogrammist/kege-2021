@@ -21,7 +21,8 @@
 """
 
 
-def two(binary):
+def two():
+    global binary
     units = binary.count('1')
     zeros = binary.count('0')
     if units == zeros:
@@ -36,9 +37,9 @@ def two(binary):
 
 for N in range(100, 500):
     binary = bin(N)[2:]
-    two(binary)
-    two(binary)
-    two(binary)
+    two()
+    two()
+    two()
     R = int(binary, 2)
     if R % 4 == 0:
         print(N)
