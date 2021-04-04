@@ -9,7 +9,7 @@ def is_prime(n):
 
 for i in range(35000000, 40000000 + 1):
     a = i
-    while a * 2 == 0:
+    while a % 2 == 0:
         a //= 2
     if a ** 0.25 == int(a ** 0.25):
         if is_prime(a ** 0.25):
