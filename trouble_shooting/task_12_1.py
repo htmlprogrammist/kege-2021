@@ -37,7 +37,7 @@
 for units in range(2, 60):
     for twos in range(2, 60):
         for threes in range(2, 60):
-            s = units * '1' + twos * '2' + threes * '3'
+            s = '0' + units * '1' + twos * '2' + threes * '3'
             while '01' in s or '02' in s or '03' in s:
                 s = s.replace('01', '2302', 1)
                 s = s.replace('02', '10', 1)
