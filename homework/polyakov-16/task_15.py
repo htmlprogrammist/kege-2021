@@ -13,11 +13,12 @@ def delenie(m, n):
     return m % n == 0
 
 
-for A in range(1, 10000):
+for A in range(1, 100):
     for x in range(1, 1000):
-        F = not delenie(x, 18) <= (delenie(x, A) or not delenie(x, 12))
+        # F = not delenie(x, 18) <= (delenie(x, A) or not delenie(x, 12))
+        F = delenie(x, 18) or delenie(x, A) or not(delenie(x, 12))
         if F:
             answers.append(A)
 
 set(answers)
-print(max(answers))
+print(min(answers))
