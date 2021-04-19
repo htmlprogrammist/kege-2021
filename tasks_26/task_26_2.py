@@ -22,7 +22,7 @@
 
 3845
 """
-document = open("task_26_2.txt")
+document = open("task_26_2_example.txt")
 data = document.readlines()
 amount = int(data[0])
 counter = 0
@@ -31,7 +31,8 @@ del data[0]
 data = sorted(list(map(int, data)))
 print(data)
 # print(sum(data) // 100)  => 4171 != 3845 (ответ)
-for i in range(len(data) // 2 + 1):
+for i in range(len(data) // 2):
     if data[i] + data[len(data) - 1 - i] == 100:
         counter += 1
+        print(data[i], data[len(data) - 1 - i])
 print(counter)
