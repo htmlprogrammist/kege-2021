@@ -31,6 +31,6 @@ del data[0]
 data = sorted(list(map(int, data)))
 # print(sum(data) // 100)  => 4171 != 3845 (ответ)
 for i in range(len(data)):
-    if data[i] + data[len(data) - i] == 100:
+    if data[i] + data[len(data) - 1 - i] == 100:
         counter += 1
 print(counter)
