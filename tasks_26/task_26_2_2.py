@@ -22,18 +22,20 @@
 
 3845
 """
-document = open("task_26_2_example.txt")
-data = document.readlines()
-amount = int(data[0])
-counter = 0
+file = open("task_26_2.txt")
+n = int(file.readline())
+c = []
 
-del data[0]
-data = sorted(list(map(int, data)))
-print(data)
+for i in range(n):
+    c.append(int(file.readline()))
 
-for i in range(len(data) // 2):
-    if data[i] + data[len(data) - 1 - i] == 100:
-        counter += 1
-        print(data[i], data[len(data) - 1 - i])
+k = 0
 
-print(counter)
+for x in range(len(c)):
+    for s in range(x + 1, len(c)):
+        if c[x] + c[s] == 100:
+            c[x] = c[s] = 0
+            k += 1
+            break
+print(k)
+
