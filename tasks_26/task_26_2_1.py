@@ -25,10 +25,12 @@
 file = open("task_26_2.txt")
 n = int(file.readline())
 c = [0] * 100
+k = 0
+
 for i in range(n):
     c[int(file.readline())] += 1
 
-k = c[50] // 2
+k += c[50] // 2
 
 for x in range(1, 50):
     k += min(c[x], c[100 - x])

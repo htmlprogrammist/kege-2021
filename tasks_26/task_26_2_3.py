@@ -30,22 +30,21 @@ del data[0]
 # data = sorted(list(map(int, data)))
 data = list(map(int, data))
 
-file = open("task_26_2.txt")
-n = int(file.readline())
-c = []
+# file = open("task_26_2.txt")
+# n = int(file.readline())
+# c = []
+#
+# for i in range(n):
+#     c.append(int(file.readline()))
+#
+# print(data == c)
+# print(data)
+# print(c)
 
-for i in range(n):
-    c.append(int(file.readline()))
-
-print(data == c)
-print(data)
-print(c)
-
-# for i in range(len(data)):
-#     for j in range(len(data), -1):
-#         if data[i] + data[j] == 100:
-#             data[i] = data[j] = 0
-#             counter += 1
-#             break
-# print(counter)
-
+for i in range(len(data)):
+    for j in range(len(data) - 1, i, -1):
+        if data[i] + data[j] == 100:
+            data[i] = data[j] = 0
+            counter += 1
+            break
+print(counter)
