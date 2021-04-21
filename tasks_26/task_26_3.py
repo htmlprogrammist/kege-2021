@@ -38,15 +38,7 @@ average = sum(data) // n  # среднее значение
 median = data[len(data) // 2]  # медиана
 
 for number in data:
-    if average <= number <= median:
+    if average < number <= median:
         counter += 1
 
-# print(average, median)  # 5003 5007
-
-# for i, number in enumerate(data):
-#     if number == 5008:
-#         print(i)
-#         break
-# 5003 - 499574
-# 5007 - 500015
 print(counter)
