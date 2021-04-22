@@ -22,11 +22,11 @@ for n in range(7, 43):
     if n == 43:
         continue
     else:
-        if (n + 2) <= 63 and n != 41:
+        if (n + 2) <= 63:
             k[n + 2] += k[n]
-        if (n + (n - 1)) <= 63 and n != 22:
+        if (n + (n - 1)) <= 63:
             k[n + (n - 1)] += k[n]
-        if (n + (n + 1)) <= 63 and n != 21:
+        if (n + (n + 1)) <= 63:
             k[n + (n + 1)] += k[n]
 
 for n in range(44, 63 + 1):
