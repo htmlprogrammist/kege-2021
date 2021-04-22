@@ -36,7 +36,7 @@ total = 0
 a = []
 for i, value in enumerate(data):
     if total + value > S:
-        i += 1
+        continue
     else:
         total += value
         counter += 1
