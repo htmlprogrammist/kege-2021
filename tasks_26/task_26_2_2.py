@@ -22,7 +22,7 @@
 
 3845
 """
-file = open("task_26_2.txt")
+file = open("txt/task_26_2.txt")
 n = int(file.readline())
 c = []
 

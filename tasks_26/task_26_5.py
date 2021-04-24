@@ -32,7 +32,7 @@ N – количество пользователей (натуральное ч
 
 496209 96
 """
-document = open("task_26_5.txt")
+document = open("txt/task_26_5.txt")
 data = document.readlines()
 n = int(data[0])
 del data[0]

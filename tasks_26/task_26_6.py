@@ -28,7 +28,7 @@ N – количество ям на дороге (натуральное чис
 
 72 17730
 """
-document = open("task_26_6_example.txt")
+document = open("txt/task_26_6_example.txt")
 data = document.readlines()
 n = int(data[0])
 del data[0]

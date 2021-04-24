@@ -22,7 +22,7 @@
 
 3845
 """
-document = open("task_26_2.txt")
+document = open("txt/task_26_2.txt")
 data = document.readlines()
 n1 = int(data[0])
 counter = 0

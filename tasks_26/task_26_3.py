@@ -27,7 +27,7 @@
 
 340
 """
-document = open("task_26_3.txt")
+document = open("txt/task_26_3.txt")
 data = document.readlines()
 n = int(data[0])
 del data[0]

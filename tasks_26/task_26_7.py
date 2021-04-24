@@ -33,7 +33,7 @@ K – количество дней, на протяжении которых П
 
 95429 3
 """
-document = open("task_26_7.txt")
+document = open("txt/task_26_7.txt")
 data = document.readlines()
 n = int(data[0].split()[0])
 k = int(data[0].split()[1])

@@ -22,7 +22,7 @@
 
 3845
 """
-document = open("task_26_2_example.txt")
+document = open("txt/task_26_2_example.txt")
 data = document.readlines()
 amount = int(data[0])
 counter = 0
