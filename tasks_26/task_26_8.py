@@ -36,8 +36,22 @@ document = open("txt/task_26_8_example.txt")
 data = document.readlines()
 n = int(data[0])
 counter = 0
+total = 0
+mx = 0
 del data[0]
 data = sorted(list(map(int, data)))
 volume = int(sum(data) * 0.9)
-print(volume)
-
+print(data)
+for i in range(n):
+    if total > volume:
+        compressed_file = int(data[i] * 0.8)
+        if total + compressed_file > volume:
+            break
+        else:
+            total += compressed_file
+    else:
+        total += data[i]
+        counter += 1
+        mx = data[i]
+print(counter, mx)
+print(total)
