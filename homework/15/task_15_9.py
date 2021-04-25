@@ -3,10 +3,9 @@
 (y + 2x < A) ∨ (x > 20) ∨ (y > 40)
 истинно для любых целых положительных значений x и y.
 """
-for A in range(2, 60):
-    for x in range(2, 60):
-        for y in range(2, 60):
-            F = (y + 2*x < A) or (x > 20) or (y > 40)
-            if F:
+for A in range(2, 300):
+    for x in range(1, 60):
+        for y in range(1, 60):
+            if (y + 2*x < A) and (x <= 20) and (y <= 40):
                 print(A)
                 break
