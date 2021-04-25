@@ -32,7 +32,7 @@ document = open("txt/task_26_6.txt")
 data = document.readlines()
 n = int(data[0])
 del data[0]
-data = sorted(list(map(int, data)))
+data = list(map(int, data))
 total = 0  # общий объем воды, вылившейся из ям обратно на дорогу.
 minimal = 25  # значение объемов ям (все числа натуральные, не превышающие 25) - это как бы максимум.
 # Можно брать хоть 999999999
@@ -49,7 +49,8 @@ for i in range(1, n - 1):
 
     if value < minimal:
         minimal = value
-        counter = 1  # Сброс счётчика, когда он нашёл новый минимум
+        counter = 0  # Сброс счётчика, когда он нашёл новый минимум
+        # Почему у Джобса тут count = 1, а у меня обнуляется?..
     if value == minimal:
         counter += 1  # подсчёт количества ям с наименьшим объемом
 
