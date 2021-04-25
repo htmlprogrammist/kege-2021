@@ -16,7 +16,8 @@ for i in range(1, n - 1):
         b = a[i]
     elif a[i] >= a[i - 1] >= a[i + 1] or a[i + 1] >= a[i - 1] >= a[i]:
         b = a[i - 1]
-    else:
+    # else:
+    elif a[i - 1] >= a[i + 1] >= a[i] or a[i] >= a[i + 1] >= a[i - 1]:
         b = a[i + 1]
 
     if b < m:
