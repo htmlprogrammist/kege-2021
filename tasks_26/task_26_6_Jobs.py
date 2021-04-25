@@ -1,3 +1,4 @@
+# https://www.youtube.com/watch?v=dqEglv3sTvo&t=7663s
 document = open("txt/task_26_6.txt")
 n = int(document.readline())  # прочитал и подчистил за собой эту строку
 # Моё почтение, прикольно
