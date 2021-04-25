@@ -28,9 +28,32 @@ N – количество ям на дороге (натуральное чис
 
 72 17730
 """
-document = open("txt/task_26_6_example.txt")
+document = open("txt/task_26_6.txt")
 data = document.readlines()
 n = int(data[0])
 del data[0]
 data = sorted(list(map(int, data)))
-print(n, data)
+total = 0  # общий объем воды, вылившейся из ям обратно на дорогу.
+minimal = 25  # значение объемов ям (все числа натуральные, не превышающие 25) - это как бы максимум.
+# Можно брать хоть 999999999
+counter = 0  # количество ям с наименьшим объемом
+value = 0
+
+for i in range(1, n - 1):
+    if data[i - 1] >= data[i] >= data[i + 1] or data[i + 1] >= data[i] >= data[i - 1]:
+        value = data[i]
+    elif data[i] >= data[i - 1] >= data[i + 1] or data[i + 1] >= data[i - 1] >= data[i]:
+        value = data[i - 1]
+    else:
+        value = data[i + 1]
+
+    if value < minimal:
+        minimal = value
+        counter = 1  # Сброс счётчика, когда он нашёл новый минимум
+    if value == minimal:
+        counter += 1  # подсчёт количества ям с наименьшим объемом
+
+    if value < data[i]:
+        total += data[i] - value  # Подсчёт количества воды, вылитой из ям на дорогу
+
+print(counter, total)

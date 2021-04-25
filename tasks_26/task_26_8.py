@@ -43,7 +43,7 @@ data = sorted(list(map(int, data)))
 volume = int(sum(data) * 0.9)
 print(data)
 for i in range(n):
-    if total > volume:
+    if total + data[i] > volume:
         compressed_file = int(data[i] * 0.8)
         if total + compressed_file > volume:
             break
@@ -55,3 +55,5 @@ for i in range(n):
         mx = data[i]
 print(counter, mx)
 print(total)
+
+# print(109 + round(17 * 0.8) + round(55 * 0.8))  # 167/170
