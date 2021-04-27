@@ -42,6 +42,6 @@ for i in range(n):
 k = len(c) - 1
 c.sort()
 
-while sum(c[k:]) * 0.8 + sum(c[:k]) >= sum(c) * 0.9:
+while sum(c[:k]) + sum(c[k:]) * 0.8 >= sum(c) * 0.9:
     k -= 1
-print(len(c) - len(c[k:]), max(c[:k]))
+print(len(c) - len(c[k:]), max(c[k:]))

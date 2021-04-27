@@ -32,28 +32,15 @@ N – количество пользователей (натуральное ч
 
 6808 99
 """
-document = open("txt/task_26_8_example.txt")
+document = open("txt/task_26_8.txt")
 data = document.readlines()
 n = int(data[0])
-counter = 0
-total = 0
-mx = 0
 del data[0]
 data = sorted(list(map(int, data)))
-volume = int(sum(data) * 0.9)
-print(data)
-for i in range(n):
-    if total + data[i] > volume:
-        compressed_file = int(data[i] * 0.8)
-        if total + compressed_file > volume:
-            break
-        else:
-            total += compressed_file
-    else:
-        total += data[i]
-        counter += 1
-        mx = data[i]
-print(counter, mx)
-print(total)
 
-# print(109 + round(17 * 0.8) + round(55 * 0.8))  # 167/170
+k = n - 1
+
+while sum(data[:k]) + sum(data[k:]) * 0.8 >= sum(data) * 0.9:
+    k -= 1
+
+print(len(data) - len(data[k:]), max(data[:k]))
