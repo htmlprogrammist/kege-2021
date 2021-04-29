@@ -14,13 +14,10 @@ AGAAA
 """
 document = open('24.txt')
 a = document.readlines()
+distance = 0
+max_distance = 0
 
 for i in range(len(a)):
-    # counter = 0
-    # for j in range(len(a[i])):
-    #     if a[i][j] == 'G':
-    #         counter += 1
-    # if counter < 25:
-    #     print(a[i])
     if a[i].count('G') < 25:
-        pass
+        for j in range(len(a[i])):
+            while 
