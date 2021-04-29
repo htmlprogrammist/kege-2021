@@ -1,7 +1,7 @@
 counter = 0
 min_i = 0
 
-for i in range(90000, 50001 + 1, -1):
+for i in range(90000, 50001 - 1, -1):
     counter_del = 0
     for j in range(2, i // 2 + 1):
         if i % j == 0:
