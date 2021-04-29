@@ -19,17 +19,27 @@
 
 В данном случае есть две подходящие пары: 3 и 8 (сумма 11), 3 и 14 (сумма 17). В ответе надо записать числа 2 и 17.
 """
-document = open('26_example.txt')
+document = open('26.txt')
 n = int(document.readline())
 a = []
 for i in range(n):
     a.append(int(document.readline()))
 a.sort()  # все числа различны
 counter = 0
+summa = 0
 
 for i in range(n - 1):
-    index = i + 1
-    # while True:
-    #     if a[i] % 2 == 0 and a[index] % 2 != 0 or a[i] % 2 != 0 and a[index] % 2 == 0:
-    #         pass
-    #     index += 1
+    for j in range(1, n):
+        if a[i] % 2 == 0 and a[j] % 2 != 0:
+            for number in a:
+                if a[i] + a[j] == number:
+                    counter += 1
+                    if a[i] + a[j] > summa:
+                        summa = a[i] + a[j]
+        elif a[i] % 2 != 0 and a[j] % 2 == 0:
+            for number in a:
+                if a[i] + a[j] == number:
+                    counter += 1
+                    if a[i] + a[j] > summa:
+                        summa = a[i] + a[j]
+print(counter, summa)

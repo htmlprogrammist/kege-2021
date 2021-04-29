@@ -11,6 +11,8 @@ AGAAA
 В этом примере во всех строках меньше 25 букв G.
 Самое большое расстояние между одинаковыми буквами – в третьей строке между буквами O,
 расположенными в строке на 2-й и 7-й позициях. В ответе для данного примера нужно вывести число 5.
+
+1001
 """
 document = open('24.txt')
 a = document.readlines()
@@ -19,5 +21,10 @@ max_distance = 0
 
 for i in range(len(a)):
     if a[i].count('G') < 25:
-        for j in range(len(a[i])):
-            while 
+        for j in range(len(a[i]) - 1):
+            for k in range(1, len(a[i])):
+                if a[i][j] == a[i][k]:
+                    distance = k - j
+                    if max_distance < distance:
+                        max_distance = distance
+print(max_distance)
