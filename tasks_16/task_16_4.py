@@ -8,8 +8,10 @@ G(n) = F(n–1) + G(n–1) + n, при n > 1
 
 40
 """
+from functools import *
 
 
+@lru_cache()
 def F(n):
     if n == 1:
         return 1
@@ -24,4 +26,10 @@ def G(n):
         return F(n - 1) + G(n - 1) + n
 
 
-print(G(36))
+string = str(G(36))
+summa = 0
+
+for number in string:
+    summa += int(number)
+
+print(summa)
