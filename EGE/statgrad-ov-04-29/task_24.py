@@ -27,4 +27,5 @@ for i in range(len(a)):
                     distance = k - j
                     if max_distance < distance:
                         max_distance = distance
+                        print(i)
 print(max_distance)

@@ -25,3 +25,12 @@ for i in range(len(a)):
                     if max_distance < distance:
                         max_distance = distance
 print(max_distance)
+
+print('---')
+
+f = open('24.txt')
+a = f.readlines()
+print(a[121])
+print(len(a[121]))
+print(a[307])
+print(len(a[307]))
