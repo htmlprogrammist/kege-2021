@@ -36,7 +36,6 @@ pairs = []
 for _ in range(n):
     # a, b = map(int, f.readline().split())
     pair = list(map(int, f.readline().split()))
-    pair.sort()
     if sum(pair) % 2 == 0:  # (1)
         s += max(pair)
     else:
