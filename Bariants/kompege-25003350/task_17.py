@@ -7,7 +7,7 @@
 counter = 0
 m = 99999999
 for i in range(34516, 95433 + 1):
-    if (i % 10 == 5 or i % 10 == 5) and i % 7 != 0 and i % 11 != 0:
+    if (i % 10 == 5 or i % 10 == 3) and i % 7 != 0 and i % 11 != 0:
         counter += 1
         m = min(m, i)
 print(counter, m)
