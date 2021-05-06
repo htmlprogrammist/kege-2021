@@ -32,7 +32,7 @@ for i in range(n - 1):
     for j in range(1, n):
         if (a[i] + a[j]) % 2 != 0:  # числа в паре имеют разную чётность (1, 2; 3, 4 - все в сумме дают нечетное)
             # for number in a:
-            for k in range(i, len(a)):
+            for k in range(j, len(a)):
                 if a[i] + a[j] == a[k]:
                     counter += 1
                     if a[i] + a[j] > summa:
