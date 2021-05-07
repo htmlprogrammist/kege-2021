@@ -18,8 +18,11 @@
 17
 
 В данном случае есть две подходящие пары: 3 и 8 (сумма 11), 3 и 14 (сумма 17). В ответе надо записать числа 2 и 17.
+
+30 954387771
+Время выполнения: 40 минут 58 секунд
 """
-document = open('26_example.txt')
+document = open('26.txt')
 n = int(document.readline())
 a = []
 for i in range(n):
@@ -30,11 +33,13 @@ summa = 0
 
 for i in range(n - 1):
     for j in range(1, n):
-        if (a[i] + a[j]) % 2 != 0:  # числа в паре имеют разную чётность (1, 2; 3, 4 - все в сумме дают нечетное)
-            # for number in a:
-            for k in range(j, len(a)):
-                if a[i] + a[j] == a[k]:
+        s = a[i] + a[j]
+        if s % 2 != 0:  # числа в паре имеют разную чётность (1, 2; 3, 4 - все в сумме дают нечетное)
+            r = max(i, j) + 1
+            for k in range(r, len(a)):
+                if s == a[k]:
                     counter += 1
                     if a[i] + a[j] > summa:
                         summa = a[i] + a[j]
+                    break
 print(counter, summa)
