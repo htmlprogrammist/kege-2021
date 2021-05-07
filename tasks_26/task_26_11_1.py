@@ -19,27 +19,29 @@
 
 В данном случае есть две подходящие пары: 3 и 8 (сумма 11), 3 и 14 (сумма 17). В ответе надо записать числа 2 и 17.
 
-30 954387771
-Время выполнения: 40 минут 58 секунд. Посмотри на tasks_26/task_26_11.py
+15 976339247
 """
-document = open('26.txt')
-n = int(document.readline())
-a = []
-for i in range(n):
-    a.append(int(document.readline()))
-a.sort()  # все числа различны
-counter = 0
-summa = 0
+# У нас файл один, а задание другое, поэтому ответ не сошёлся, но при этом с тем, что выводит у Алтана сошлось
 
-for i in range(n - 1):
-    for j in range(1, n):
-        s = a[i] + a[j]
-        if s % 2 != 0:  # числа в паре имеют разную чётность (1, 2; 3, 4 - все в сумме дают нечетное)
-            r = max(i, j) + 1
-            for k in range(r, len(a)):
-                if s == a[k]:
-                    counter += 1
-                    if a[i] + a[j] > summa:
-                        summa = a[i] + a[j]
-                    break
-print(counter, summa)
+f = open('../Bariants/statgrad-ov-04-29/26.txt')
+n = int(f.readline())
+c = []
+for i in range(n):
+    c.append(int(f.readline()))
+
+d = []
+for i in range(n):
+    if c[i] % 2 == 0:
+        d.append(c[i])
+
+k = 0
+max_s = 0
+
+for i in range(len(d)):
+    for n in range(i + 1, len(d)):
+        b = (d[i] + d[n]) // 2
+        if b in c:
+            k += 1
+            if b > max_s:
+                max_s = b
+print(k, max_s)
