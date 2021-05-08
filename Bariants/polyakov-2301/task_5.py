@@ -22,27 +22,10 @@ for N in range(700, 800 + 1):
     digits.sort()
     for i in range(len(digits)):
         biggerNum = int(str(digits[2]) + str(digits[1]))
-
         if digits[0] == 0:
-            lessNum = 0
+            pass
         else:
             lessNum = int(str(digits[0]) + str(digits[1]))
     if biggerNum - lessNum == 80:
         counter += 1
-        print(N, digits)  # У Полякова косяк, я считаю. Числа-то у меня правильные, поэтому ответ 3
-        print(biggerNum, lessNum)
-        print('---')
 print(counter)
-"""
-Output:
-719 [1, 7, 9]
-97 17
----
-791 [1, 7, 9]
-97 17
----
-800 [0, 0, 8]
-80 0
----
-3
-"""
