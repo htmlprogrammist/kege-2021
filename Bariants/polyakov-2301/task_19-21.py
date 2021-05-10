@@ -18,9 +18,9 @@
   позволяющая ему выиграть первым или вторым ходом при любой игре Пети,
   и при этом у Вани нет стратегии, которая позволит ему гарантированно выиграть первым ходом.
 
-11 (-)
-17 20 (+)
-2 (+, тут 16 и 19)
+11
+17 20
+2
 """
 from functools import *
 
@@ -38,6 +38,7 @@ def game(h):
 
     if any(game(m) == 'W' for m in moves(h)):
         return 'P1'
+    # if any(game(m) == 'P1' for m in moves(h)):  # для 19 задания
     if all(game(m) == 'P1' for m in moves(h)):
         return 'V1'
     if any(game(m) == 'V1' for m in moves(h)):
