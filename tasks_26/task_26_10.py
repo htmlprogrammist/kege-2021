@@ -35,7 +35,6 @@ a = list(map(int, a))
 a.sort(reverse=True)
 current_sum = 0
 counter = 0
-
 tonns = []
 for i in range(n):
     if current_sum + a[i] <= s:
@@ -44,8 +43,9 @@ for i in range(n):
         # print(current_sum)
         tonns.append(a[i])
         a[i] = 0
-        print(tonns)
+        print('Is True:', tonns)
     else:
-        current_sum = 0  # разгружаюсь
+        print('Is False:', tonns)
+        current_sum = a[i]  # разгружаюсь
         tonns = []
 print(counter)
