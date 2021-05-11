@@ -13,14 +13,16 @@
 Какую наибольшую сумму цифр может иметь строка, которая получится после
 выполнения программы?
 """
-s = '1' * 12 + 4 * '2'
+# s = '1' * 12 + 4 * '2'
+s = '1121121121121111'  # (1) ... то берём такую хрень
 while '11' in s:
     if '112' in s:
-        s = s.replace('112', '7', 1)
+        s = s.replace('112', '7', 1)  # это условие выгодное, поэтому... (1)
     else:
         s = s.replace('11', '3', 1)
-
-summa = 0
-for symbol in s:
-    summa += int(symbol)
-print(summa)
+print(s)
+print(sum([int(x) for x in s]))
+# summa = 0
+# for symbol in s:
+#     summa += int(symbol)
+# print(summa)

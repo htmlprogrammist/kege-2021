@@ -21,7 +21,6 @@
 
 15 976339247
 """
-
 f = open('../Bariants/statgrad-ov-04-29/26.txt')
 n = int(f.readline())
 c = []

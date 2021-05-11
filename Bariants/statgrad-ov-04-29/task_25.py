@@ -18,6 +18,8 @@ for n in range(400000000, 600000000 + 1):
     while number % 3 == 0:
         number //= 3  # отбрасываю все степени двойки
         counter_odd += 1
+    if number != 1:
+        continue
     if counter_odd % 2 != 0 and counter_even % 2 == 0 and counter_even != 0:
         if 2 ** counter_even * 3 ** counter_odd == n:
-            print(n)
+            print(n, number)
