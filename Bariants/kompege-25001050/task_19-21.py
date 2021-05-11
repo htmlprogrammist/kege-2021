@@ -51,6 +51,7 @@ def game(h):
 
 
 counter_v1 = 0
+counter_v2 = 0
 
 for s in range(1, 29 + 1):
     for k in range(1, 29 + 1):
@@ -58,4 +59,13 @@ for s in range(1, 29 + 1):
         # print(s, k, game(h))
         if game(h) == 'V1':
             counter_v1 += 1
-print(counter_v1)  # 10 пар - совпало
+        elif game(h) == "V2":
+            counter_v2 += 1
+
+for s in range(1, 30):
+    h = s, 6
+    if game(h) == "P2":
+        print(s, game(h))
+
+print("19 task:", counter_v1)  # 10 пар - совпало
+print("20 task:", counter_v2)  # 8 пар - совпало
