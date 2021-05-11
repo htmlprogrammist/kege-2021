@@ -5,6 +5,7 @@
 в любую кучу один камень или увеличить количество камней в любой куче в два раза.
 Игра завершается в тот момент, когда сумма камней в кучах становится не менее 30.
 В начальный момент в первой куче было K камней, а во второй – S камней, 1 ≤ K ≤ 29, 1 ≤ S ≤ 29.
+
 Сколько существует пар (S; K), таких что Ваня выигрывает первым ходом при любой игре Пети?
 
 Задание 20.
@@ -25,4 +26,36 @@
 5 11
 8
 """
+from functools import *
 
+
+def moves(h):
+    a, b = h
+    return (a + 1, b), (a * 2, b), (a, b + 1), (a, b * 2)
+
+
+@lru_cache(None)
+def game(h):
+    a, b = h
+    if a + b >= 30:
+        return 'W'
+
+    if any(game(m) == 'W' for m in moves(h)):
+        return 'P1'
+    if all(game(m) == 'P1' for m in moves(h)):
+        return 'V1'
+    if any(game(m) == 'V1' for m in moves(h)):
+        return 'P2'
+    if all(game(m) == 'P1' or game(m) == 'P2' for m in moves(h)):
+        return 'V2'
+
+
+counter_v1 = 0
+
+for s in range(1, 29 + 1):
+    for k in range(1, 29 + 1):
+        h = s, k
+        # print(s, k, game(h))
+        if game(h) == 'V1':
+            counter_v1 += 1
+print(counter_v1)  # 10 пар - совпало
