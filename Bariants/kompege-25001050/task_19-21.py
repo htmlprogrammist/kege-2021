@@ -62,10 +62,11 @@ for s in range(1, 29 + 1):
         elif game(h) == "V2":
             counter_v2 += 1
 
+print("19 task:", counter_v1)  # 10 пар - совпало
+
 for s in range(1, 30):
     h = s, 6
     if game(h) == "P2":
-        print(s, game(h))
+        print('20 task:', s)
 
-print("19 task:", counter_v1)  # 10 пар - совпало
-print("20 task:", counter_v2)  # 8 пар - совпало
+print("21 task:", counter_v2)  # 8 пар - совпало
