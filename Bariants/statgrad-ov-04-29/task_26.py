@@ -20,26 +20,31 @@
 В данном случае есть две подходящие пары: 3 и 8 (сумма 11), 3 и 14 (сумма 17). В ответе надо записать числа 2 и 17.
 
 15 954387771
-Время выполнения: 40 минут 58 секунд. Посмотри на tasks_26/task_26_11.py
 """
 document = open('26.txt')
 n = int(document.readline())
-a = []
+# a = []
+even = []
+odd = []
 for i in range(n):
-    a.append(int(document.readline()))
-a.sort()  # все числа различны
+    # a.append(int(document.readline()))
+    a = int(document.readline())
+    if a % 2 == 0:
+        even.append(a)
+    else:
+        odd.append(a)
+# a.sort()  # все числа различны
 counter = 0
 summa = 0
+chet = set(even)
+nechet = set(odd)
 
-for i in range(n - 1):
-    for j in range(1, n):
-        s = a[i] + a[j]
-        if s % 2 != 0:  # числа в паре имеют разную чётность (1, 2; 3, 4 - все в сумме дают нечетное)
-            r = max(i, j) + 1
-            for k in range(r, len(a)):
-                if s == a[k]:
-                    counter += 1
-                    if a[i] + a[j] > summa:
-                        summa = a[i] + a[j]
-                    break
-print(counter // 2, summa)  # // 2, т.к. числа, по сути, зеркалятся, поэтому counter дублируется
+for i in range(len(even)):
+    for j in range(len(odd)):
+        s = even[i] + odd[j]
+        if s in chet or s in nechet:
+            counter += 1
+            if s > summa:
+                summa = s
+            break
+print(counter, summa)
