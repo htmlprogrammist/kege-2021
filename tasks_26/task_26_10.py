@@ -45,7 +45,7 @@ for i in range(n):
         a[i] = 0
         print('Is True:', tonns)
     else:
-        print('Is False:', tonns)
+        print('Is False:', tonns, a[i])
         current_sum = a[i]  # разгружаюсь
-        tonns = []
+        tonns = [a[i]]  # разгружаюсь
 print(counter)
