@@ -25,27 +25,27 @@ S – грузоподъёмность грузового судна в тонн
 Первым рейсом будет отправлено 2 груза – 240 и 220, вторым – 200, 160 и 140, третьим – 150.
 
 423 501
+https://youtu.be/d0c3P3mcVZQ?t=9619
 """
-f = open('txt/task_26_10_example.txt')
-a = f.readlines()
-n = int(a[0].split()[0])
-s = int(a[0].split()[1])
-del a[0]
-a = list(map(int, a))
-a.sort(reverse=True)
-current_sum = 0
+f = open('txt/task_26_10.txt')
+n, s = map(int, f.readline().split())
+w = []
+for _ in range(n):
+    w.append(int(f.readline()))
+w.sort(reverse=True)
 counter = 0
-tonns = []
-for i in range(n):
-    if current_sum + a[i] <= s:
-        current_sum += a[i]
-        counter += 1
-        # print(current_sum)
-        tonns.append(a[i])
-        a[i] = 0
-        print('Is True:', tonns)
+
+while True:
+    weight = 0
+    for i in range(len(w)):
+        if weight + w[i] <= s:
+            weight += w[i]
+            w[i] = 0  # перевезённый груз
+    print(weight)
+
+    if weight == 0:
+        break  # перевозим грузы, пока 0 не останется
     else:
-        print('Is False:', tonns, a[i])
-        current_sum = a[i]  # разгружаюсь
-        tonns = [a[i]]  # разгружаюсь
+        counter += 1
+
 print(counter)
