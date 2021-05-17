@@ -1,3 +1,6 @@
+"""
+64
+"""
 from functools import *
 
 
@@ -13,7 +16,7 @@ def f(n):
 
 
 counter = 0
-for n in range(67890):
+for n in range(1, 67890):
     result = f(n)
     if result < 10 ** 8:
         counter += 1
