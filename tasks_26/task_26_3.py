@@ -34,11 +34,11 @@ del data[0]
 data = sorted(list(map(int, data)))  # данные теперь имеют целочисленный тип, всё в одной коробочке
 counter = 0
 
-average = sum(data) // n  # среднее значение
+average = sum(data) / n  # среднее значение
 median = data[len(data) // 2]  # медиана
 
 for number in data:
-    if average < number <= median:
+    if average <= number <= median:
         counter += 1
 
 print(counter)
