@@ -20,3 +20,17 @@ for i in range(25552, 58885 + 1):
         counter += 1
         mx = i
 print(counter, mx)
+
+# 2-й способ
+count = 0
+m = 0
+
+for i in range(25552, 58885 + 1):
+    cd = 0
+    for j in range(10, 100):
+        if i % j == 0:
+            cd += 1
+    if cd >= 15:
+        count += 1
+        m = i
+print(count, m)
