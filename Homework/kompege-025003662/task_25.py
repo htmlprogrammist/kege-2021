@@ -9,5 +9,33 @@
 Формат вывода: для каждого из 5 таких найденных чисел в отдельной строке сначала выводится само число,
 затем – значение М.
 Например, для числа 50 M = 5 + 10 = 15
-"""
 
+710021 54630
+710109 78910
+710121 236710
+710211 236740
+710421 236810
+"""
+nums = []
+MandMs = []
+M = 0
+
+for i in range(710017, 800000):
+    d_min = 0
+    for d in range(int(i ** 0.5), 1, -1):
+        if i % d == 0:
+            d_min = d
+            break
+    if d_min != 0:
+        cur_M = d_min + (i // d_min)
+    else:
+        cur_M = 0
+    if cur_M % 10 == 0 and cur_M > M:
+        nums.append(i)
+        MandMs.append(cur_M)
+        M = cur_M
+    if len(nums) > 5:
+        break
+
+for i in range(5):
+    print(nums[i], MandMs[i])
