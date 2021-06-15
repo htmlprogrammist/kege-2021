@@ -26,22 +26,25 @@
 Возможные массы этих двух контейнеров 30 и 40, 30 и 50 или 40 и 50. Поэтому ответ для приведённого примера
 2 50
 
-1612
+1612 90
 """
-# f = open('Задание 26/26.txt')
-f = open('Задание 26/test.txt')
+f = open('Задание 26/26.txt')
+# f = open('Задание 26/test.txt')
 string = f.readline()
 s = int(string.split()[0])
 n = int(string.split()[1])
 w = sorted(map(int, f.readlines()))
-total = []
+total = 0
 counter = 0
 
 for i in range(n):
-    if sum(total) + w[i] > s:
+    if total + w[i] > s:
         break
-    total.append(w[i])
+    total += w[i]
     counter += 1
-print(counter, max(total))
+# print(counter)
+print(i)  # i и есть counter, разницы нет, что то начинается с нуля, что это
 
-
+delta = s - total
+candidates = [x for x in w if x - w[i - 1] <= delta]
+print(max(candidates))
