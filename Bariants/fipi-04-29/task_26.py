@@ -41,7 +41,7 @@ for i in range(n):
     if total + w[i] > s:
         break
     total += w[i]
-    counter += 1
+    # counter += 1
 # print(counter)
 print(i)  # i и есть counter, разницы нет, что то начинается с нуля, что это
 
