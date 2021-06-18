@@ -17,12 +17,23 @@
 310017 1506
 310038 17226
 """
-for i in range(310000, 400000):
-    a = set()
-    for j in range(2, int(i ** 0.5) + 1):
+
+
+def prost(n):
+    d = 2
+    while d * d <= n:
+        if n % d == 0:
+            return False
+        d += 1
+    return True
+
+
+for i in range(310000, 310040):
+    a = []
+    for j in range(2, i // 2 + 1):
         if i % j == 0:
-            a.add(j)
-            a.add(i // j)
+            if prost(j):
+                a.append(j)
     if len(a) != 0:
         A = sum(a) // len(a)
     else:
