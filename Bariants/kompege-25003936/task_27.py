@@ -30,7 +30,14 @@ s = [0]
 for i in range(n):
     pair = [int(x) for x in f.readline().split()]
     cmb = [a + b for a in s for b in pair]
-    s = {x % 123: x for x in sorted(cmb, reverse=True)}.values()
+    # s = {x % 123: x for x in sorted(cmb, reverse=True)}.values() (1)
+    s = {x % 246: x for x in sorted(cmb, reverse=True)}.values()
 
 m = min(x for x in s if x % 123 != 0 and x % 2 == 0)
 print(m)
+# (1) по нечетному остатку нельзя судить о четности числа
+
+# ну типо при делении по модулю на нечетное число нельзя точно сказать делимое число четное или нет,
+# поэтому делитель надо домножить на 2, и тогда уже можно судить о четности делимого
+
+# 4 % 3 == 1 6 % 3 == 0  оба четные, разные остатки
