@@ -5,11 +5,21 @@
 В ответе перечислите найденные числа в порядке возрастания
 (в отдельные поля для ответов).
 """
+
+
+def is_prime(n):
+    d = 2
+    while d * d <= n:
+        if n % d == 0:
+            return False
+        d += 1
+    return True
+
+
 for i in range(45000000, 50000000 + 1):
-    counter_odd_del = 0
-    for j in range(2, i // 2 + 1):
-        if i % j == 0:
-            if j % 2 != 0:
-                counter_odd_del += 1
-    if counter_odd_del == 4:
-        print(i)
+    a = i
+    while a % 2 == 0:
+        a //= 2
+    if a ** 0.25 == int(a ** 0.25):
+        if is_prime(a ** 0.25):
+            print(i)
