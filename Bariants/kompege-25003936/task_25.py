@@ -28,7 +28,7 @@ def prost(n):
     return True
 
 
-for i in range(310000, 310040):
+for i in range(310001, 310040):
     a = []
     for j in range(2, i // 2 + 1):
         if i % j == 0:
