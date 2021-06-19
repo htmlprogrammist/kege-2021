@@ -42,6 +42,4 @@ for i in range(n):
     total += w[i]
 
 print(n - i)
-delta = s - total
-
-candidates = [x for x in w]
+print(sum(w[i:]))
