@@ -25,7 +25,7 @@ n = 0
 # print(n, min(dividers))
 
 min_i = 0
-for i in range(22000, 11000, -1):
+for i in range(22000, 11000 - 1, -1):
     k = 0
     if i % 11 == 0:
         k += 1
