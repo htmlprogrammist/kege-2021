@@ -44,12 +44,12 @@ def moves(h):
 @lru_cache(None)
 def game(h):
     a, b = h
-    if a + b >= 63:
+    if a * b >= 63:
         return 'W'
 
     if any(game(m) == 'W' for m in moves(h)):
         return 'P1'
-    if any(game(m) == 'P1' for m in moves(h)):
+    if all(game(m) == 'P1' for m in moves(h)):
         return 'V1'
     if any(game(m) == 'V1' for m in moves(h)):
         return 'P2'
