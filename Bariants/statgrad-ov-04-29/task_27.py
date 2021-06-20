@@ -26,4 +26,9 @@
 """
 f = open('sg_2020-2021_inf5_27/25-A.txt')
 n = int(f.readline())
+s = [0]
 
+for i in range(n):
+    pair = [int(x) for x in f.readline().split()]
+    if pair[0] % 2 != 0:
+        pass
