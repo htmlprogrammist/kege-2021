@@ -36,3 +36,4 @@ Link to the variant: https://kompege.ru/variant?kim=25004413
 | 27 |  |  |  |
 
 ## Разбор полётов
+
