@@ -59,4 +59,9 @@ def game(h):
 
 for s in range(1, 31 + 1):
     h = 2, s
-    print(s, game(h))
+    if game(h) == 'V1':
+        print(s, game(h))
+    if game(h) == 'P2':
+        print(s, game(h))
+    if game(h) == 'V2':
+        print(s, game(h))
