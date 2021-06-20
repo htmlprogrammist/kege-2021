@@ -12,7 +12,8 @@ p = product('ПАНЕЛЬ', repeat=6)
 s = map(lambda x: "".join(x), p)
 
 for i in s:
-    if i.count('П') == 1 and i.count('А') == 1 and i.count('Н') == 1 and i.count('Е') == 1 and i.count('Л') == 1 and i.count('Ь') == 1:
+    if len(set(i)) == 6:
+    # if i.count('П') == 1 and i.count('А') == 1 and i.count('Н') == 1 and i.count('Е') == 1 and i.count('Л') == 1 and i.count('Ь') == 1:
         if i[0] != 'Ь' and i.count('ЕАП') == 0:
             counter += 1
 
