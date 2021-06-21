@@ -20,7 +20,7 @@
 
 115 1365890
 """
-f = open('txt/27-A-1764.txt')
+f = open('txt/27-B-1764.txt')
 n = int(f.readline())
 
 s = [[0, 0]]
