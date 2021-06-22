@@ -7,8 +7,13 @@
 6
 """
 f = open('24/24_934.txt')
-s = f.readline()
-# s = 'AABBAABBCCDDDEFFGF'
+# s = f.readline()
+s = 'AABBAABBCCDDDEFFGF'
+#   'A B A B C D E F GF'
+#    [2,2,2,2,2,3,1,2,1,1]
+# суммарно: мы считаем, сколько раз повторяется та или иная буква и складываем их (1)
+# A2 B2 A2 B2 C2 D3 E1 F2 G1 F1
+
 single_string = s[0]  # накапливаем строку, где у нас будут все буквы разные
 count_letters = [1]  # накапливаем, сколько букв на каждой позиции соответствуют строке
 
@@ -19,13 +24,13 @@ for i in range(1, len(s)):  # перебираем все символы с пе
         single_string += s[i]
         count_letters.append(1)  # новая последовательностьо
 
-# print(single_string)
-# print(count_letters)
+print(single_string)
+print(count_letters)
 max_len = 0
 
 for i in range(len(single_string) - 2):
     if single_string[i] < single_string[i + 1] < single_string[i + 2]:
-        sum_letters = count_letters[i] + count_letters[i + 1] + count_letters[i + 2]
+        sum_letters = count_letters[i] + count_letters[i + 1] + count_letters[i + 2]  # (1)
         if max_len < sum_letters:
             max_len = sum_letters
 
