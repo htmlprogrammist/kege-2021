@@ -15,17 +15,15 @@ AGAAA
 1001
 """
 document = open('24.txt')
-a = document.readlines()
 distance = 0
 max_distance = 0
 
-for i in range(len(a)):
-    if a[i].count('G') < 25:
-        for j in range(len(a[i]) - 1):
-            for k in range(1, len(a[i])):
-                if a[i][j] == a[i][k]:
+for i in document:
+    if i.count('G') < 25:
+        for j in range(len(i) - 1):
+            for k in range(1, len(i)):
+                if i[j] == i[k]:
                     distance = k - j
                     if max_distance < distance:
                         max_distance = distance
-                        print(i)
 print(max_distance)
