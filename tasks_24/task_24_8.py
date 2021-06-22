@@ -7,8 +7,8 @@
 6
 """
 f = open('24/24_934.txt')
-# s = f.readline()
-s = 'AABBAABBCCDDDEFFGF'
+s = f.readline()
+# s = 'AABBAABBCCDDDEFFGF'
 #   'A B A B C D E F GF'
 #    [2,2,2,2,2,3,1,2,1,1]
 # суммарно: мы считаем, сколько раз повторяется та или иная буква и складываем их (1)
