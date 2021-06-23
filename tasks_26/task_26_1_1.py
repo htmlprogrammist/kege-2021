@@ -38,7 +38,7 @@ delta = S - total  # 8200 – 8176 (текущая сумма) = 24
 #               if x - data[i - 1] <= delta]
 candidates = []
 for x in data:
-    if x - data[i - 1] <= delta:
+    if x <= delta + data[i - 1]:
         candidates.append(x)
         mx = x
 # data[i - 1] - это значение наибольшего выбранного элемента data[i]
